@@ -1,6 +1,9 @@
-version: 2.1
 orbs:
-  circleci-images: circleci/circleci-images@0.7.0
+  maven: circleci/maven@1.0.0
+version: 2.1
+workflows:
   steps:
-    - run:
-        command:  install-browser-tools
+  maven_test:
+    jobs:
+      - maven/test
+
