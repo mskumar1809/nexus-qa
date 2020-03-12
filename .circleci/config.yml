@@ -23,7 +23,7 @@ jobs: # a collection of steps
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       - run:
           name: Install Chrome
-          command: apt-get update
+          command: USER root && apt-get update
             && apt-get install --no-install-recommends --no-install-suggests -y \
             unzip \
             gnupg \
