@@ -21,6 +21,13 @@ jobs: # a collection of steps
           paths:
             - ~/.m2
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+      - run:
+          name: Install dependencies
+          command: |
+            apt-get update
+            curl -sS https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+            apt-get update && apt-get install google-chrome-stable=80.0.3987.106
+            wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip && unzip chromedriver_linux64.zip -d /usr/local/bin && rm chromedriver_linux64.zip && chmod +x /usr/local/bin/chromedriver
 
       - run: mvn clean test # run the actual tests
 
