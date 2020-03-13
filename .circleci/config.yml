@@ -14,4 +14,14 @@ jobs:
           command: java -jar selenium-server-standalone-3.141.59.jar -log test-reports/selenium.log
           background: true
       - run: mvn test
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/test-results/junit/
+            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+          when: always
+      - store_test_results:
+          path: ~/test-results
+      - store_artifacts:
+          path: ~/test-results/junit
 
