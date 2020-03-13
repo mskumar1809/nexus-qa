@@ -23,6 +23,9 @@ TestCafeExampleThankYouPageLocators  testCafeExampleThankYouPageLocators = null;
 	public void assertTheNameInThankYouPage(String expected) {
 		WebDriverWait wait = new WebDriverWait(SeleniumDriver.getDriver(), 30);
 		wait.until(ExpectedConditions.visibilityOf(testCafeExampleThankYouPageLocators.thankYouNameHeaderField));
+		if(expected.isEmpty()){
+			expected = "Peter Parker";
+		}
 		String actualText = testCafeExampleThankYouPageLocators.thankYouNameHeaderField.getText();
 		System.out.println(actualText);
 		assertTrue(actualText.contains(expected));

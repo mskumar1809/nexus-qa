@@ -23,6 +23,7 @@ public class TestCafeExampleSteps {
 
 	@When("^I enter the  \"([^\"]*)\" in Name field$")
 	public void i_enter_the_in_Name_field(String userName) throws Throwable {
+		System.out.println("The passed name for this data is " + userName);
 		testCafeExampleLandingPageActions.enterNameInYourNameTextField(userName);
 	}
 	
@@ -41,7 +42,7 @@ public class TestCafeExampleSteps {
 
 	@And("^I provide \"([^\"]*)\" for TestCafe$")
 	public void i_provide_for_TestCafe(String arg1) throws Throwable {
-		
+		testCafeExampleLandingPageActions.setTheTestCafeRating(arg1);
 	    
 	}
 
