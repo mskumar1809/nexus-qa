@@ -30,7 +30,7 @@ public class TestCafeExampleLandingPageLocators {
 	@FindBy(how = How.CSS, using="#tried-test-cafe")
 	public WebElement triedTestCafeCheckBox;
 	
-	@FindBy(how = How.CSS, using="#slider")
+	@FindBy(how = How.CSS, using="#slider > span")
 	public WebElement slider;
 	
 	@FindBy(how = How.CSS, using="#windows")

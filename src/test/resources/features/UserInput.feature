@@ -23,7 +23,8 @@ Feature: Accepatnce Testing to validate the user input
     
     Examples: 
       | name          | features                                        | experienced | rating | os      | interface | comments  |
-      | Sampath Kumar | Remote Support, Re-using JS, Background running | y           |      8 | Mac     | both      | Very good |
-      | Peter Parker  | Remote Support, Re-using JS                     | N           | N/A    | Windows | CLI       | 		     |
-      | Tony Stark    | None                                            | y           |      6 | Linux   | both      | okish     |
-      | Thor          | All                                             | N           | N/A    | Linux   | both      | 		     |
+      | Indiana Jones | Remote Support, Re-using JS, Background running | Y           | 6      | Mac     | both      | Very good |
+      | Sampath Kumar | Remote Support, Re-using JS                     | Yes         | 3      | Windows | CLI       | 		     |
+      | Tony Stark    | None                                            | No          | N/A    | Linux   | both      | okish     |
+      |               | None                                            | no          | N/A    | Linux   | both      | 		     |
+      |               | All                                             | Yes         | N/A    | Linux   | both      | Pretty Amazing |
