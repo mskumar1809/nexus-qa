@@ -23,7 +23,7 @@
 ```
 1. Set Up Instructions
   a. Clone the repo into local using the command
-     `git clone https://github.com/mskumar1809/NexusPreTest.git`
+     `git clone https://github.com/mskumar1809/nexus-qa.git`
   b. Change directory into the root of the project
      `cd NexusPreTest`  
 2. Execution Instructions
